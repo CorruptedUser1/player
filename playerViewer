@@ -43,7 +43,7 @@ local UICorner_11 = Instance.new("UICorner")
 --Properties:
 
 playerViewer.Name = "playerViewer"
-playerViewer.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+playerViewer.Parent = game.CoreGui
 playerViewer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 mainFrame.Name = "mainFrame"
@@ -344,7 +344,7 @@ end
 
 -- Scripts:
 
-local function HKUJ_fake_script() -- Handler.Main 
+local function ZKDGLG_fake_script() -- Handler.Main 
 	local script = Instance.new('LocalScript', Handler)
 	local req = require
 	local require = function(obj)
@@ -571,5 +571,25 @@ local function HKUJ_fake_script() -- Handler.Main
 		end
 	end
 end
-coroutine.wrap(HKUJ_fake_script)()
--- Handler.Affect is disabled.
+coroutine.wrap(ZKDGLG_fake_script)()
+local function YBVEKB_fake_script() -- Handler.Affect 
+	local script = Instance.new('LocalScript', Handler)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	local Mouse = game.Players.LocalPlayer:GetMouse()
+	local CircleClick = require(script.Parent.Parent.Parent.Parent.Handler:WaitForChild("CircleClick")) 
+	wait(1)
+	script.Enabled = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
+	end)
+end
+coroutine.wrap(YBVEKB_fake_script)()
