@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local playerViewer = Instance.new("ScreenGui")
 local mainFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -31,15 +26,18 @@ local Tele = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
 local Frame_3 = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
-local add = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local block = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
 local Handler = Instance.new("Folder")
 local TextButton = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local Circle = Instance.new("ImageLabel")
 local ImageLabel = Instance.new("ImageLabel")
+local UICorner_9 = Instance.new("UICorner")
+local Frame_4 = Instance.new("Frame")
+local UIName = Instance.new("TextLabel")
+local UIName_2 = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local ImageLabel_2 = Instance.new("ImageLabel")
 local UICorner_11 = Instance.new("UICorner")
 
 --Properties:
@@ -51,16 +49,17 @@ playerViewer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 mainFrame.Name = "mainFrame"
 mainFrame.Parent = playerViewer
 mainFrame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-mainFrame.Position = UDim2.new(0.327017128, 0, 0.307980031, 0)
-mainFrame.Size = UDim2.new(0, 565, 0, 307)
+mainFrame.Position = UDim2.new(0.327017128, 0, 0.288029909, 0)
+mainFrame.Size = UDim2.new(0, 565, 0, 339)
 
 UICorner.Parent = mainFrame
 
 plrHolder.Name = "plrHolder"
 plrHolder.Parent = mainFrame
 plrHolder.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-plrHolder.Position = UDim2.new(0.021238938, 0, 0.0228013024, 0)
+plrHolder.Position = UDim2.new(0.021238938, 0, 0.116481736, 0)
 plrHolder.Size = UDim2.new(0, 180, 0, 292)
+plrHolder.ZIndex = 2
 
 UICorner_2.Parent = plrHolder
 
@@ -71,6 +70,7 @@ mainPlrHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 mainPlrHolder.BackgroundTransparency = 1.000
 mainPlrHolder.BorderSizePixel = 0
 mainPlrHolder.Size = UDim2.new(0, 180, 0, 292)
+mainPlrHolder.CanvasSize = UDim2.new(0, 0, 10, 0)
 mainPlrHolder.ScrollBarThickness = 2
 mainPlrHolder.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
 
@@ -88,8 +88,9 @@ border.Size = UDim2.new(0, 100, 0, 0)
 infoFrame.Name = "infoFrame"
 infoFrame.Parent = mainFrame
 infoFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-infoFrame.Position = UDim2.new(0.364601761, 0, 0.0228013024, 0)
+infoFrame.Position = UDim2.new(0.364601761, 0, 0.116481736, 0)
 infoFrame.Size = UDim2.new(0, 346, 0, 292)
+infoFrame.ZIndex = 2
 
 UICorner_3.Parent = infoFrame
 
@@ -98,6 +99,7 @@ plrImage.Parent = infoFrame
 plrImage.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 plrImage.Position = UDim2.new(0.0346820801, 0, 0.0273972601, 0)
 plrImage.Size = UDim2.new(0, 100, 0, 100)
+plrImage.ZIndex = 2
 
 UICorner_4.Parent = plrImage
 
@@ -107,8 +109,9 @@ userName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 userName.BackgroundTransparency = 1.000
 userName.Position = UDim2.new(0.361271679, 0, 0.0273972601, 0)
 userName.Size = UDim2.new(0, 211, 0, 24)
+userName.ZIndex = 2
 userName.Font = Enum.Font.GothamBold
-userName.Text = "Name:"
+userName.Text = "Name: Roblox"
 userName.TextColor3 = Color3.fromRGB(255, 255, 255)
 userName.TextSize = 14.000
 userName.TextXAlignment = Enum.TextXAlignment.Left
@@ -122,8 +125,9 @@ userId.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 userId.BackgroundTransparency = 1.000
 userId.Position = UDim2.new(0.361271679, 0, 0.19178082, 0)
 userId.Size = UDim2.new(0, 211, 0, 24)
+userId.ZIndex = 2
 userId.Font = Enum.Font.GothamBold
-userId.Text = "ID:"
+userId.Text = "ID: 1"
 userId.TextColor3 = Color3.fromRGB(255, 255, 255)
 userId.TextSize = 14.000
 userId.TextXAlignment = Enum.TextXAlignment.Left
@@ -137,8 +141,9 @@ displayName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 displayName.BackgroundTransparency = 1.000
 displayName.Position = UDim2.new(0.361271679, 0, 0.10958904, 0)
 displayName.Size = UDim2.new(0, 211, 0, 24)
+displayName.ZIndex = 2
 displayName.Font = Enum.Font.GothamBold
-displayName.Text = "Display:"
+displayName.Text = "Display: @Roblox"
 displayName.TextColor3 = Color3.fromRGB(255, 255, 255)
 displayName.TextSize = 14.000
 displayName.TextXAlignment = Enum.TextXAlignment.Left
@@ -152,8 +157,9 @@ accAge.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 accAge.BackgroundTransparency = 1.000
 accAge.Position = UDim2.new(0.361271679, 0, 0.273972601, 0)
 accAge.Size = UDim2.new(0, 211, 0, 24)
+accAge.ZIndex = 2
 accAge.Font = Enum.Font.GothamBold
-accAge.Text = "Joined:"
+accAge.Text = "Joined: 2/27/2006"
 accAge.TextColor3 = Color3.fromRGB(255, 255, 255)
 accAge.TextSize = 14.000
 accAge.TextXAlignment = Enum.TextXAlignment.Left
@@ -165,6 +171,7 @@ Frame.Parent = infoFrame
 Frame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 Frame.Position = UDim2.new(0.0346820801, 0, 0.458904117, 0)
 Frame.Size = UDim2.new(0, 324, 0, 145)
+Frame.ZIndex = 2
 
 UICorner_5.Parent = Frame
 
@@ -184,6 +191,7 @@ Tele.Parent = Frame
 Tele.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 Tele.Position = UDim2.new(0.165044874, 0, 0.458904117, 0)
 Tele.Size = UDim2.new(0, 230, 0, 24)
+Tele.ZIndex = 2
 Tele.AutoButtonColor = false
 Tele.Font = Enum.Font.GothamBold
 Tele.Text = "TELEPORT"
@@ -197,34 +205,21 @@ Frame_3.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
 Frame_3.BorderSizePixel = 0
 Frame_3.Position = UDim2.new(0.111111112, 0, 0.496551722, 0)
 Frame_3.Size = UDim2.new(0, 280, 0, 1)
+Frame_3.ZIndex = 2
 
 UICorner_7.Parent = Frame_3
 
-add.Name = "add"
-add.Parent = Frame
-add.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
-add.Position = UDim2.new(0.165044874, 0, 0.458904117, 0)
-add.Size = UDim2.new(0, 230, 0, 24)
-add.AutoButtonColor = false
-add.Font = Enum.Font.GothamBold
-add.Text = "ADD"
-add.TextColor3 = Color3.fromRGB(255, 255, 255)
-add.TextSize = 14.000
-
-UICorner_8.Parent = add
-
-block.Name = "block"
-block.Parent = Frame
-block.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
-block.Position = UDim2.new(0.165044874, 0, 0.458904117, 0)
-block.Size = UDim2.new(0, 230, 0, 24)
-block.AutoButtonColor = false
-block.Font = Enum.Font.GothamBold
-block.Text = "BLOCK"
-block.TextColor3 = Color3.fromRGB(255, 255, 255)
-block.TextSize = 14.000
-
-UICorner_9.Parent = block
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.19135803, 0, 0.337931037, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 80)
+TextLabel.ZIndex = 2
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "More Coming Soon!"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 26.000
+TextLabel.TextWrapped = true
 
 Handler.Name = "Handler"
 Handler.Parent = mainFrame
@@ -239,7 +234,7 @@ TextButton.Font = Enum.Font.GothamBold
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextSize = 14.000
 
-UICorner_10.Parent = TextButton
+UICorner_8.Parent = TextButton
 
 Circle.Name = "Circle"
 Circle.Parent = Handler
@@ -255,7 +250,51 @@ ImageLabel.Position = UDim2.new(0.109734513, 0, 0.0488599241, 0)
 ImageLabel.Size = UDim2.new(0, 80, 0, 80)
 ImageLabel.Visible = false
 
-UICorner_11.Parent = ImageLabel
+UICorner_9.Parent = ImageLabel
+
+Frame_4.Parent = mainFrame
+Frame_4.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+Frame_4.BorderSizePixel = 0
+Frame_4.Size = UDim2.new(0, 565, 0, 30)
+Frame_4.ZIndex = 2
+
+UIName.Name = "UIName"
+UIName.Parent = Frame_4
+UIName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UIName.BackgroundTransparency = 1.000
+UIName.Position = UDim2.new(0.021238938, 0, 0.0281972252, 0)
+UIName.Size = UDim2.new(0, 110, 0, 29)
+UIName.ZIndex = 2
+UIName.Font = Enum.Font.SourceSansBold
+UIName.Text = "Player Viewer"
+UIName.TextColor3 = Color3.fromRGB(255, 255, 255)
+UIName.TextSize = 15.000
+UIName.TextXAlignment = Enum.TextXAlignment.Left
+
+UIName_2.Name = "UIName"
+UIName_2.Parent = UIName
+UIName_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UIName_2.BackgroundTransparency = 1.000
+UIName_2.Position = UDim2.new(0.784875512, 0, -0.0407683291, 0)
+UIName_2.Size = UDim2.new(0, 40, 0, 24)
+UIName_2.ZIndex = 2
+UIName_2.Font = Enum.Font.SourceSansBold
+UIName_2.Text = "1"
+UIName_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+UIName_2.TextSize = 12.000
+UIName_2.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_10.Parent = Frame_4
+
+ImageLabel_2.Parent = mainFrame
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.ClipsDescendants = true
+ImageLabel_2.Size = UDim2.new(0, 565, 0, 339)
+ImageLabel_2.Image = "http://www.roblox.com/asset/?id=327558548"
+ImageLabel_2.ImageColor3 = Color3.fromRGB(156, 156, 156)
+
+UICorner_11.Parent = ImageLabel_2
 
 -- Module Scripts:
 
@@ -305,7 +344,7 @@ end
 
 -- Scripts:
 
-local function RSPH_fake_script() -- Handler.Main 
+local function WVAIID_fake_script() -- Handler.Main 
 	local script = Instance.new('LocalScript', Handler)
 	local req = require
 	local require = function(obj)
@@ -317,192 +356,7 @@ local function RSPH_fake_script() -- Handler.Main
 	end
 
 	wait(game:IsLoaded())
-	wait(1)
-	for i,v in pairs(game.Players:GetPlayers()) do
-		if v.Name == game.Players.LocalPlayer.Name then
-			local clone = script.Parent.TextButton:Clone()
-			clone.Parent = script.Parent.Parent.plrHolder.mainPlrHolder
-			clone.Name = v.Name
-			clone.Text = (' @')..v.DisplayName..(' (You)')
-			clone.UIStroke.Color = Color3.fromRGB(234, 255, 0)
-			clone.Visible = true
-		else
-			local clone = script.Parent.TextButton:Clone()
-			clone.Parent = script.Parent.Parent.plrHolder.mainPlrHolder
-			clone.Name = v.Name
-			clone.Text = (' @')..v.DisplayName
-			clone.Visible = true
-		end
-	end
-	
-	game.Players.PlayerRemoving:Connect(function(plr)
-		for i,m in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
-			if m:IsA('TextButton') and m.Name == plr.Name then
-				m:Remove()
-			end
-		end
-	end)
-	
-	game.Players.PlayerAdded:Connect(function(plrh)
-		local clone = script.Parent.TextButton:Clone()
-		clone.Parent = script.Parent.Parent.plrHolder.mainPlrHolder
-		clone.Name = plrh.Name
-		clone.Text = (' @')..plrh.DisplayName
-		clone.Visible = true
-	end)
-	
-	for i,z in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
-		if z:IsA('TextButton') then
-			z.MouseButton1Click:Connect(function()
-				local Mouse = game.Players.LocalPlayer:GetMouse()
-				local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
-				for i,p in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
-					if p:IsA('TextButton') then
-						CircleClick(p, Mouse.X, Mouse.Y) 
-					end
-				end
-				script.Parent.Parent.infoFrame.userName.Text = ("Name: "..z.Name)
-				script.Parent.Parent.infoFrame.userId.Text = ("ID: ")..game.Players:FindFirstChild(z.Name).UserId
-				script.Parent.Parent.infoFrame.displayName.Text = ("Display: @")..game.Players:FindFirstChild(z.Name).DisplayName
-				script.Parent.Parent.infoFrame.Frame.Tele.plr.Value = z.Name
-				local Player = game.Players:FindFirstChild(z.Name)
-	
-				local joinTime = os.time() - (Player.AccountAge*86400)
-				local joinDate = os.date("!*t", joinTime)
-	
-				script.Parent.Parent.infoFrame.accAge.Text = "Joined: "..joinDate.month.."/"..joinDate.day.."/"..joinDate.year
-				local Players = game:GetService("Players")
-	
-				local player = z.Name
-	
-				-- Fetch the thumbnail
-				local userId = Players:FindFirstChild(z.Name).UserId
-				local thumbType = Enum.ThumbnailType.HeadShot
-				local thumbSize = Enum.ThumbnailSize.Size420x420
-				local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
-	
-				-- Set the ImageLabel's content to the user thumbnail
-				local imageLabel = script.Parent.Parent.infoFrame.plrImage
-				imageLabel.Image = content
-			end)
-		end
-	end
-	
-	local UserInputService = game:GetService("UserInputService")
-	local runService = (game:GetService("RunService"));
-	
-	local gui = script.Parent.Parent
-	
-	local dragging
-	local dragInput
-	local dragStart
-	local startPos
-	
-	function Lerp(a, b, m)
-		return a + (b - a) * m
-	end;
-	
-	local lastMousePos
-	local lastGoalPos
-	local DRAG_SPEED = (8); -- // The speed of the UI darg.
-	function Update(dt)
-		if not (startPos) then return end;
-		if not (dragging) and (lastGoalPos) then
-			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
-			return 
-		end;
-	
-		local delta = (lastMousePos - UserInputService:GetMouseLocation())
-		local xGoal = (startPos.X.Offset - delta.X);
-		local yGoal = (startPos.Y.Offset - delta.Y);
-		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
-		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
-	end;
-	
-	gui.InputBegan:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
-			dragging = true
-			dragStart = input.Position
-			startPos = gui.Position
-			lastMousePos = UserInputService:GetMouseLocation()
-	
-			input.Changed:Connect(function()
-				if input.UserInputState == Enum.UserInputState.End then
-					dragging = false
-				end
-			end)
-		end
-	end)
-	
-	gui.InputChanged:Connect(function(input)
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			dragInput = input
-		end
-	end)
-	
-	runService.Heartbeat:Connect(Update)
-	
-	script.Parent.Parent.infoFrame.Frame.Tele.MouseButton1Click:Connect(function()
-		local find = game.Workspace:FindFirstChild(script.Parent.Parent.infoFrame.Frame.Tele.plr.Value):WaitForChild('HumanoidRootPart')
-		
-		if find then
-			
-			local Mouse = game.Players.LocalPlayer:GetMouse()
-			local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
-			
-			CircleClick(script.Parent.Parent.infoFrame.Frame.Tele, Mouse.X, Mouse.Y) 
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = find.CFrame
-			
-			game.StarterGui:SetCore("SendNotification", {
-				Title = "Player Veiwer (1.B)";
-				Text = "Teleported To Player: "..script.Parent.Parent.infoFrame.Frame.Tele.plr.Value;
-				Icon = "http://www.roblox.com/asset/?id=9830915901";
-				Duration = 5;
-			})
-		end
-	end)
-	
-	script.Parent.Parent.infoFrame.Frame.add.MouseButton1Click:Connect(function()
-		local Mouse = game.Players.LocalPlayer:GetMouse()
-		local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
-		CircleClick(script.Parent.Parent.infoFrame.Frame.add, Mouse.X, Mouse.Y) 
-		
-		game:GetService("StarterGui"):SetCore("PromptSendFriendRequest", script.Parent.Parent.infoFrame.Frame.Tele.plr.Value)
-		
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Player Veiwer (1.B)";
-			Text = "Sent Friend Request To: "..script.Parent.Parent.infoFrame.Frame.Tele.plr.Value;
-			Icon = "http://www.roblox.com/asset/?id=9830915901";
-			Duration = 5;
-		})
-	end)
-	
-	script.Parent.Parent.infoFrame.Frame.block.MouseButton1Click:Connect(function()
-		game:GetService("StarterGui"):SetCore("PromptBlockPlayer", script.Parent.Parent.infoFrame.Frame.Tele.plr.Value)
-		
-		game.StarterGui:SetCore("SendNotification", {
-			Title = "Player Veiwer (1.B)";
-			Text = "Blocked Player: "..script.Parent.Parent.infoFrame.Frame.Tele.plr.Value;
-			Icon = "http://www.roblox.com/asset/?id=9830915901";
-			Duration = 5;
-		})
-	end)
-	
-end
-coroutine.wrap(RSPH_fake_script)()
-local function XBDP_fake_script() -- Handler.strokeGiver 
-	local script = Instance.new('LocalScript', Handler)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
-	wait(game:IsLoaded())
-	wait()
+	---------------------------------------------------------------------------------------------------------------[ Stroke Giver ]
 	--------------------------------------------------- mainFrame
 	local strokeNew = Instance.new('UIStroke')
 	strokeNew.Parent = script.Parent
@@ -554,25 +408,165 @@ local function XBDP_fake_script() -- Handler.strokeGiver
 	clone7.Color = Color3.fromRGB(0, 0, 0)
 	clone7.Enabled = true
 	clone7.Parent = script.Parent.Parent.infoFrame
-	--------------------------------------------------- Button
-	local clone8 = script.Parent:WaitForChild('UIStroke'):Clone()
-	clone8.Thickness = 1
-	clone8.ApplyStrokeMode = 'Border'
-	clone8.Color = Color3.fromRGB(0, 255, 157)
-	clone8.Enabled = true
-	clone8.Parent = script.Parent.Parent.infoFrame.Frame.add
-	--------------------------------------------------- Button
-	local clone0 = script.Parent:WaitForChild('UIStroke'):Clone()
-	clone0.Thickness = 1
-	clone0.ApplyStrokeMode = 'Border'
-	clone0.Color = Color3.fromRGB(0, 255, 157)
-	clone0.Enabled = true
-	clone0.Parent = script.Parent.Parent.infoFrame.Frame.block
 	
 	script.Parent.Parent.plrHolder.mainPlrHolder.ScrollBarImageTransparency = 1
 	
 	local womp = Instance.new('StringValue')
 	womp.Name = 'plr'
 	womp.Parent = script.Parent.Parent.infoFrame.Frame.Tele
+	-----------------------------------------------------------------------------------------------------------[ END ]
+	
+	---------------------------------------------------------------------------------------------------[ Button Clone ]
+	wait(1)
+	for i,v in pairs(game.Players:GetPlayers()) do
+		if v.Name == game.Players.LocalPlayer.Name then
+			local clone = script.Parent.TextButton:Clone()
+			clone.Parent = script.Parent.Parent.plrHolder.mainPlrHolder
+			clone.Name = v.Name
+			clone.Text = (' @')..v.DisplayName..(' (You)')
+			clone.UIStroke.Color = Color3.fromRGB(234, 255, 0)
+			clone.Visible = true
+		else
+			local clone = script.Parent.TextButton:Clone()
+			clone.Parent = script.Parent.Parent.plrHolder.mainPlrHolder
+			clone.Name = v.Name
+			clone.Text = (' @')..v.DisplayName
+			clone.Visible = true
+		end
+	end
+	
+	game.Players.PlayerRemoving:Connect(function(plr)
+		for i,m in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
+			if m:IsA('TextButton') and m.Name == plr.Name then
+				m:Remove()
+			end
+		end
+	end)
+	
+	game.Players.PlayerAdded:Connect(function(plrh)
+		local clone = script.Parent.TextButton:Clone()
+		clone.Parent = script.Parent.Parent.plrHolder.mainPlrHolder
+		clone.Name = plrh.Name
+		clone.Text = (' @')..plrh.DisplayName
+		clone.Visible = true
+	end)
+	----------------------------------------------------------------------------------------------------[ END ]
+	
+	----------------------------------------------------------------------------------------------------[ Circle Click & Info ]
+	for i,z in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
+		if z:IsA('TextButton') then
+			z.MouseButton1Click:Connect(function()
+				local Mouse = game.Players.LocalPlayer:GetMouse()
+				local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
+				for i,p in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
+					if p:IsA('TextButton') then
+						CircleClick(p, Mouse.X, Mouse.Y) 
+					end
+				end
+				script.Parent.Parent.infoFrame.userName.Text = ("Name: "..z.Name)
+				script.Parent.Parent.infoFrame.userId.Text = ("ID: ")..game.Players:FindFirstChild(z.Name).UserId
+				script.Parent.Parent.infoFrame.displayName.Text = ("Display: @")..game.Players:FindFirstChild(z.Name).DisplayName
+				script.Parent.Parent.infoFrame.Frame.Tele.plr.Value = z.Name
+				local Player = game.Players:FindFirstChild(z.Name)
+	
+				local joinTime = os.time() - (Player.AccountAge*86400)
+				local joinDate = os.date("!*t", joinTime)
+	
+				script.Parent.Parent.infoFrame.accAge.Text = "Joined: "..joinDate.month.."/"..joinDate.day.."/"..joinDate.year
+				local Players = game:GetService("Players")
+	
+				local player = z.Name
+	
+				-- Fetch the thumbnail
+				local userId = Players:FindFirstChild(z.Name).UserId
+				local thumbType = Enum.ThumbnailType.HeadShot
+				local thumbSize = Enum.ThumbnailSize.Size420x420
+				local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+				-- Set the ImageLabel's content to the user thumbnail
+				local imageLabel = script.Parent.Parent.infoFrame.plrImage
+				imageLabel.Image = content
+			end)
+		end
+	end
+	------------------------------------------------------------------------------------------------------[ END ]
+	
+	--------------------------------------------------------------------------------------------------------[ UI Drag ]
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (20); -- // The speed of the UI drag.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	runService.Heartbeat:Connect(Update)
+	--------------------------------------------------------------------------------------------------------------[ END ]
+	
+	-------------------------------------------------------------------------------------------------------------[ Button Functions ]
+	script.Parent.Parent.infoFrame.Frame.Tele.MouseButton1Click:Connect(function()
+		local find = game.Workspace:FindFirstChild(script.Parent.Parent.infoFrame.Frame.Tele.plr.Value):WaitForChild('HumanoidRootPart')
+		
+		if find then
+			
+			local Mouse = game.Players.LocalPlayer:GetMouse()
+			local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
+			
+			CircleClick(script.Parent.Parent.infoFrame.Frame.Tele, Mouse.X, Mouse.Y) 
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = find.CFrame
+			
+			game.StarterGui:SetCore("SendNotification", {
+				Title = "Player Viewer";
+				Text = "Teleported To Player: "..script.Parent.Parent.infoFrame.Frame.Tele.plr.Value;
+				Icon = "http://www.roblox.com/asset/?id=9830915901";
+				Duration = 5;
+			})
+		end
+	end)
+	---------------------------------------------------------------------------------------------------------------[ END ]
 end
-coroutine.wrap(XBDP_fake_script)()
+coroutine.wrap(WVAIID_fake_script)()
