@@ -344,7 +344,7 @@ end
 
 -- Scripts:
 
-local function ZKDGLG_fake_script() -- Handler.Main 
+local function IVJZG_fake_script() -- Handler.Main 
 	local script = Instance.new('LocalScript', Handler)
 	local req = require
 	local require = function(obj)
@@ -567,12 +567,13 @@ local function ZKDGLG_fake_script() -- Handler.Main
 		if a:IsA('TextButton') then
 			local clone = script.Parent.Affect:Clone()
 			clone.Parent = a
+			wait(2)
 			clone.Enabled = true
 		end
 	end
 end
-coroutine.wrap(ZKDGLG_fake_script)()
-local function YBVEKB_fake_script() -- Handler.Affect 
+coroutine.wrap(IVJZG_fake_script)()
+local function TZBU_fake_script() -- Handler.Affect 
 	local script = Instance.new('LocalScript', Handler)
 	local req = require
 	local require = function(obj)
@@ -592,4 +593,4 @@ local function YBVEKB_fake_script() -- Handler.Affect
 		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
 	end)
 end
-coroutine.wrap(YBVEKB_fake_script)()
+coroutine.wrap(TZBU_fake_script)()
