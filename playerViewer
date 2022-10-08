@@ -24,21 +24,24 @@ local UIListLayout_2 = Instance.new("UIListLayout")
 local Frame_2 = Instance.new("Frame")
 local Tele = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
-local Frame_3 = Instance.new("Frame")
+local BorderHolder = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
-local TextLabel = Instance.new("TextLabel")
+local mainPlrHolder_2 = Instance.new("ScrollingFrame")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local accAge_2 = Instance.new("TextLabel")
+local UIGradient_5 = Instance.new("UIGradient")
 local Handler = Instance.new("Folder")
 local TextButton = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local Circle = Instance.new("ImageLabel")
 local ImageLabel = Instance.new("ImageLabel")
 local UICorner_9 = Instance.new("UICorner")
-local Frame_4 = Instance.new("Frame")
-local UIName = Instance.new("TextLabel")
-local UIName_2 = Instance.new("TextLabel")
+local BG = Instance.new("ImageLabel")
 local UICorner_10 = Instance.new("UICorner")
-local ImageLabel_2 = Instance.new("ImageLabel")
+local Frame_3 = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
+local accAge_3 = Instance.new("TextLabel")
+local UIGradient_6 = Instance.new("UIGradient")
 
 --Properties:
 
@@ -49,16 +52,16 @@ playerViewer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 mainFrame.Name = "mainFrame"
 mainFrame.Parent = playerViewer
 mainFrame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-mainFrame.Position = UDim2.new(0.327017128, 0, 0.288029909, 0)
-mainFrame.Size = UDim2.new(0, 565, 0, 339)
+mainFrame.Position = UDim2.new(0.276283622, 0, 0.216957599, 0)
+mainFrame.Size = UDim2.new(0, 732, 0, 453)
 
 UICorner.Parent = mainFrame
 
 plrHolder.Name = "plrHolder"
 plrHolder.Parent = mainFrame
 plrHolder.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-plrHolder.Position = UDim2.new(0.021238938, 0, 0.116481736, 0)
-plrHolder.Size = UDim2.new(0, 180, 0, 292)
+plrHolder.Position = UDim2.new(0.0212389007, 0, 0.0237665232, 0)
+plrHolder.Size = UDim2.new(0, 180, 0, 432)
 plrHolder.ZIndex = 2
 
 UICorner_2.Parent = plrHolder
@@ -69,9 +72,9 @@ mainPlrHolder.Active = true
 mainPlrHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 mainPlrHolder.BackgroundTransparency = 1.000
 mainPlrHolder.BorderSizePixel = 0
-mainPlrHolder.Size = UDim2.new(0, 180, 0, 292)
+mainPlrHolder.Size = UDim2.new(0, 180, 0, 432)
 mainPlrHolder.CanvasSize = UDim2.new(0, 0, 10, 0)
-mainPlrHolder.ScrollBarThickness = 2
+mainPlrHolder.ScrollBarThickness = 0
 mainPlrHolder.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
 
 UIListLayout.Parent = mainPlrHolder
@@ -88,8 +91,8 @@ border.Size = UDim2.new(0, 100, 0, 0)
 infoFrame.Name = "infoFrame"
 infoFrame.Parent = mainFrame
 infoFrame.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-infoFrame.Position = UDim2.new(0.364601761, 0, 0.116481736, 0)
-infoFrame.Size = UDim2.new(0, 346, 0, 292)
+infoFrame.Position = UDim2.new(0.290831268, 0, 0.151801839, 0)
+infoFrame.Size = UDim2.new(0, 509, 0, 374)
 infoFrame.ZIndex = 2
 
 UICorner_3.Parent = infoFrame
@@ -97,8 +100,8 @@ UICorner_3.Parent = infoFrame
 plrImage.Name = "plrImage"
 plrImage.Parent = infoFrame
 plrImage.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-plrImage.Position = UDim2.new(0.0346820801, 0, 0.0273972601, 0)
-plrImage.Size = UDim2.new(0, 100, 0, 100)
+plrImage.Position = UDim2.new(0.032717444, 0, 0.0461138412, 0)
+plrImage.Size = UDim2.new(0, 120, 0, 120)
 plrImage.ZIndex = 2
 
 UICorner_4.Parent = plrImage
@@ -107,7 +110,7 @@ userName.Name = "userName"
 userName.Parent = infoFrame
 userName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 userName.BackgroundTransparency = 1.000
-userName.Position = UDim2.new(0.361271679, 0, 0.0273972601, 0)
+userName.Position = UDim2.new(0.294474036, 0, 0.0487876348, 0)
 userName.Size = UDim2.new(0, 211, 0, 24)
 userName.ZIndex = 2
 userName.Font = Enum.Font.GothamBold
@@ -123,7 +126,7 @@ userId.Name = "userId"
 userId.Parent = infoFrame
 userId.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 userId.BackgroundTransparency = 1.000
-userId.Position = UDim2.new(0.361271679, 0, 0.19178082, 0)
+userId.Position = UDim2.new(0.294474036, 0, 0.213171184, 0)
 userId.Size = UDim2.new(0, 211, 0, 24)
 userId.ZIndex = 2
 userId.Font = Enum.Font.GothamBold
@@ -139,7 +142,7 @@ displayName.Name = "displayName"
 displayName.Parent = infoFrame
 displayName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 displayName.BackgroundTransparency = 1.000
-displayName.Position = UDim2.new(0.361271679, 0, 0.10958904, 0)
+displayName.Position = UDim2.new(0.294474036, 0, 0.130979404, 0)
 displayName.Size = UDim2.new(0, 211, 0, 24)
 displayName.ZIndex = 2
 displayName.Font = Enum.Font.GothamBold
@@ -155,7 +158,7 @@ accAge.Name = "accAge"
 accAge.Parent = infoFrame
 accAge.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 accAge.BackgroundTransparency = 1.000
-accAge.Position = UDim2.new(0.361271679, 0, 0.273972601, 0)
+accAge.Position = UDim2.new(0.291583866, 0, 0.295362979, 0)
 accAge.Size = UDim2.new(0, 211, 0, 24)
 accAge.ZIndex = 2
 accAge.Font = Enum.Font.GothamBold
@@ -169,8 +172,8 @@ UIGradient_4.Parent = accAge
 
 Frame.Parent = infoFrame
 Frame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-Frame.Position = UDim2.new(0.0346820801, 0, 0.458904117, 0)
-Frame.Size = UDim2.new(0, 324, 0, 145)
+Frame.Position = UDim2.new(0.0209297817, 0, 0.453556478, 0)
+Frame.Size = UDim2.new(0, 488, 0, 194)
 Frame.ZIndex = 2
 
 UICorner_5.Parent = Frame
@@ -189,8 +192,8 @@ Frame_2.Size = UDim2.new(0, 100, 0, 0)
 Tele.Name = "Tele"
 Tele.Parent = Frame
 Tele.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
-Tele.Position = UDim2.new(0.165044874, 0, 0.458904117, 0)
-Tele.Size = UDim2.new(0, 230, 0, 24)
+Tele.Position = UDim2.new(0.264344275, 0, 0.0412371121, 0)
+Tele.Size = UDim2.new(0, 268, 0, 24)
 Tele.ZIndex = 2
 Tele.AutoButtonColor = false
 Tele.Font = Enum.Font.GothamBold
@@ -200,26 +203,48 @@ Tele.TextSize = 14.000
 
 UICorner_6.Parent = Tele
 
-Frame_3.Parent = Frame
-Frame_3.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
-Frame_3.BorderSizePixel = 0
-Frame_3.Position = UDim2.new(0.111111112, 0, 0.496551722, 0)
-Frame_3.Size = UDim2.new(0, 280, 0, 1)
-Frame_3.ZIndex = 2
+BorderHolder.Name = "BorderHolder"
+BorderHolder.Parent = Frame
+BorderHolder.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+BorderHolder.BorderSizePixel = 0
+BorderHolder.Position = UDim2.new(0.213114753, 0, 0.206185564, 0)
+BorderHolder.Size = UDim2.new(0, 424, 0, 1)
+BorderHolder.ZIndex = 2
 
-UICorner_7.Parent = Frame_3
+UICorner_7.Parent = BorderHolder
 
-TextLabel.Parent = Frame
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.Position = UDim2.new(0.19135803, 0, 0.337931037, 0)
-TextLabel.Size = UDim2.new(0, 200, 0, 80)
-TextLabel.ZIndex = 2
-TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "More Coming Soon!"
-TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 26.000
-TextLabel.TextWrapped = true
+mainPlrHolder_2.Name = "mainPlrHolder"
+mainPlrHolder_2.Parent = BorderHolder
+mainPlrHolder_2.Active = true
+mainPlrHolder_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mainPlrHolder_2.BackgroundTransparency = 1.000
+mainPlrHolder_2.BorderSizePixel = 0
+mainPlrHolder_2.Position = UDim2.new(0, 0, 34.2926941, 0)
+mainPlrHolder_2.Size = UDim2.new(0, 424, 0, 110)
+mainPlrHolder_2.ZIndex = 2
+mainPlrHolder_2.CanvasSize = UDim2.new(10, 0, 0, 0)
+mainPlrHolder_2.ScrollBarThickness = 0
+mainPlrHolder_2.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
+
+UIListLayout_3.Parent = mainPlrHolder_2
+UIListLayout_3.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.Padding = UDim.new(0, 10)
+
+accAge_2.Name = "accAge"
+accAge_2.Parent = BorderHolder
+accAge_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+accAge_2.BackgroundTransparency = 1.000
+accAge_2.Position = UDim2.new(0.250725001, 0, 3.29268909, 0)
+accAge_2.Size = UDim2.new(0, 211, 0, 24)
+accAge_2.ZIndex = 2
+accAge_2.Font = Enum.Font.GothamBold
+accAge_2.Text = "Player's Inventory"
+accAge_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+accAge_2.TextSize = 14.000
+
+UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(173, 173, 173))}
+UIGradient_5.Parent = accAge_2
 
 Handler.Name = "Handler"
 Handler.Parent = mainFrame
@@ -245,56 +270,49 @@ Circle.Image = "rbxassetid://266543268"
 Circle.ImageTransparency = 0.900
 
 ImageLabel.Parent = Handler
-ImageLabel.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
-ImageLabel.Position = UDim2.new(0.109734513, 0, 0.0488599241, 0)
-ImageLabel.Size = UDim2.new(0, 80, 0, 80)
+ImageLabel.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
+ImageLabel.Position = UDim2.new(0.0751366094, 0, 0.0485651232, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
 ImageLabel.Visible = false
+ImageLabel.ZIndex = 2
+ImageLabel.Image = "rbxthumb://type=Asset&id=553722174&w=420&h=420"
 
 UICorner_9.Parent = ImageLabel
 
-Frame_4.Parent = mainFrame
-Frame_4.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
-Frame_4.BorderSizePixel = 0
-Frame_4.Size = UDim2.new(0, 565, 0, 30)
-Frame_4.ZIndex = 2
+BG.Name = "BG"
+BG.Parent = mainFrame
+BG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BG.BackgroundTransparency = 1.000
+BG.ClipsDescendants = true
+BG.Size = UDim2.new(0, 732, 0, 453)
+BG.Image = "http://www.roblox.com/asset/?id=327558548"
+BG.ImageColor3 = Color3.fromRGB(156, 156, 156)
 
-UIName.Name = "UIName"
-UIName.Parent = Frame_4
-UIName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UIName.BackgroundTransparency = 1.000
-UIName.Position = UDim2.new(0.021238938, 0, 0.0281972252, 0)
-UIName.Size = UDim2.new(0, 110, 0, 29)
-UIName.ZIndex = 2
-UIName.Font = Enum.Font.SourceSansBold
-UIName.Text = "Player Viewer"
-UIName.TextColor3 = Color3.fromRGB(255, 255, 255)
-UIName.TextSize = 15.000
-UIName.TextXAlignment = Enum.TextXAlignment.Left
+UICorner_10.Parent = BG
 
-UIName_2.Name = "UIName"
-UIName_2.Parent = UIName
-UIName_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-UIName_2.BackgroundTransparency = 1.000
-UIName_2.Position = UDim2.new(0.784875512, 0, -0.0407683291, 0)
-UIName_2.Size = UDim2.new(0, 40, 0, 24)
-UIName_2.ZIndex = 2
-UIName_2.Font = Enum.Font.SourceSansBold
-UIName_2.Text = "1"
-UIName_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-UIName_2.TextSize = 12.000
-UIName_2.TextXAlignment = Enum.TextXAlignment.Left
+Frame_3.Parent = mainFrame
+Frame_3.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Frame_3.Position = UDim2.new(0.290831268, 0, 0.0237665232, 0)
+Frame_3.Size = UDim2.new(0, 508, 0, 43)
+Frame_3.ZIndex = 2
 
-UICorner_10.Parent = Frame_4
+UICorner_11.Parent = Frame_3
 
-ImageLabel_2.Parent = mainFrame
-ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-ImageLabel_2.BackgroundTransparency = 1.000
-ImageLabel_2.ClipsDescendants = true
-ImageLabel_2.Size = UDim2.new(0, 565, 0, 339)
-ImageLabel_2.Image = "http://www.roblox.com/asset/?id=327558548"
-ImageLabel_2.ImageColor3 = Color3.fromRGB(156, 156, 156)
+accAge_3.Name = "accAge"
+accAge_3.Parent = Frame_3
+accAge_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+accAge_3.BackgroundTransparency = 1.000
+accAge_3.Position = UDim2.new(0.041379936, 0, 0.20942004, 0)
+accAge_3.Size = UDim2.new(0, 112, 0, 24)
+accAge_3.ZIndex = 2
+accAge_3.Font = Enum.Font.GothamBold
+accAge_3.Text = "Player Viewer"
+accAge_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+accAge_3.TextSize = 16.000
+accAge_3.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner_11.Parent = ImageLabel_2
+UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(173, 173, 173))}
+UIGradient_6.Parent = accAge_3
 
 -- Module Scripts:
 
@@ -344,7 +362,7 @@ end
 
 -- Scripts:
 
-local function IVJZG_fake_script() -- Handler.Main 
+local function ESZPX_fake_script() -- Handler.Main 
 	local script = Instance.new('LocalScript', Handler)
 	local req = require
 	local require = function(obj)
@@ -479,6 +497,22 @@ local function IVJZG_fake_script() -- Handler.Main
 				-- Set the ImageLabel's content to the user thumbnail
 				local imageLabel = script.Parent.Parent.infoFrame.plrImage
 				imageLabel.Image = content
+				
+				for i,g in ipairs(script.Parent.Parent.infoFrame.Frame.BorderHolder.mainPlrHolder:GetChildren()) do
+					if g:IsA('ImageLabel') then
+						g:Destroy()
+					end
+				end
+				
+				local info = game.Players:GetCharacterAppearanceInfoAsync(game.Players:FindFirstChild(z.Name).UserId)
+				for i,v in ipairs(info['assets']) do
+					if v then
+						local clone = script.Parent.ImageLabel:Clone()
+						clone.Parent = script.Parent.Parent.infoFrame.Frame.BorderHolder.mainPlrHolder
+						clone.Image = 'rbxthumb://type=Asset&id='..v.id..'&w=420&h=420'
+						clone.Visible = true
+					end
+				end
 			end)
 		end
 	end
@@ -565,32 +599,13 @@ local function IVJZG_fake_script() -- Handler.Main
 	----------------------------------------------------------------------------------------------------------------[ Affect Giver]
 	for i,a in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
 		if a:IsA('TextButton') then
-			local clone = script.Parent.Affect:Clone()
-			clone.Parent = a
-			wait(2)
-			clone.Enabled = true
-		end
-	end
-end
-coroutine.wrap(IVJZG_fake_script)()
-local function TZBU_fake_script() -- Handler.Affect 
-	local script = Instance.new('LocalScript', Handler)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
-
-	local Mouse = game.Players.LocalPlayer:GetMouse()
-	local CircleClick = require(script.Parent.Parent.Parent.Parent.Handler:WaitForChild("CircleClick")) 
-	wait(1)
-	script.Enabled = false
+			a.MouseButton1Click:Connect(function()
+				local Mouse = game.Players.LocalPlayer:GetMouse()
+				local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		CircleClick(script.Parent, Mouse.X, Mouse.Y) 
-	end)
+				CircleClick(a, Mouse.X, Mouse.Y) 
+			end)
+		end
+	end
 end
-coroutine.wrap(TZBU_fake_script)()
+coroutine.wrap(ESZPX_fake_script)()
