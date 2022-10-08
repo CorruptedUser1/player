@@ -43,7 +43,7 @@ local UICorner_11 = Instance.new("UICorner")
 --Properties:
 
 playerViewer.Name = "playerViewer"
-playerViewer.Parent = game.CoreGui
+playerViewer.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 playerViewer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 mainFrame.Name = "mainFrame"
@@ -344,7 +344,7 @@ end
 
 -- Scripts:
 
-local function WVAIID_fake_script() -- Handler.Main 
+local function HKUJ_fake_script() -- Handler.Main 
 	local script = Instance.new('LocalScript', Handler)
 	local req = require
 	local require = function(obj)
@@ -456,13 +456,6 @@ local function WVAIID_fake_script() -- Handler.Main
 	for i,z in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
 		if z:IsA('TextButton') then
 			z.MouseButton1Click:Connect(function()
-				local Mouse = game.Players.LocalPlayer:GetMouse()
-				local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
-				for i,p in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
-					if p:IsA('TextButton') then
-						CircleClick(p, Mouse.X, Mouse.Y) 
-					end
-				end
 				script.Parent.Parent.infoFrame.userName.Text = ("Name: "..z.Name)
 				script.Parent.Parent.infoFrame.userId.Text = ("ID: ")..game.Players:FindFirstChild(z.Name).UserId
 				script.Parent.Parent.infoFrame.displayName.Text = ("Display: @")..game.Players:FindFirstChild(z.Name).DisplayName
@@ -568,5 +561,15 @@ local function WVAIID_fake_script() -- Handler.Main
 		end
 	end)
 	---------------------------------------------------------------------------------------------------------------[ END ]
+	
+	----------------------------------------------------------------------------------------------------------------[ Affect Giver]
+	for i,a in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
+		if a:IsA('TextButton') then
+			local clone = script.Parent.Affect:Clone()
+			clone.Parent = a
+			clone.Enabled = true
+		end
+	end
 end
-coroutine.wrap(WVAIID_fake_script)()
+coroutine.wrap(HKUJ_fake_script)()
+-- Handler.Affect is disabled.
