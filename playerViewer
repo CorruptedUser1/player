@@ -20,28 +20,32 @@ local accAge = Instance.new("TextLabel")
 local UIGradient_4 = Instance.new("UIGradient")
 local Frame = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
-local UIListLayout_2 = Instance.new("UIListLayout")
 local Frame_2 = Instance.new("Frame")
-local Tele = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
 local BorderHolder = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
 local mainPlrHolder_2 = Instance.new("ScrollingFrame")
-local UIListLayout_3 = Instance.new("UIListLayout")
+local UIListLayout_2 = Instance.new("UIListLayout")
 local accAge_2 = Instance.new("TextLabel")
 local UIGradient_5 = Instance.new("UIGradient")
+local Frame_3 = Instance.new("Frame")
+local holderBtn = Instance.new("Frame")
+local UIListLayout_3 = Instance.new("UIListLayout")
+local Tele = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local copyLink = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
 local Handler = Instance.new("Folder")
 local TextButton = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local Circle = Instance.new("ImageLabel")
 local ImageLabel = Instance.new("ImageLabel")
-local UICorner_9 = Instance.new("UICorner")
-local BG = Instance.new("ImageLabel")
 local UICorner_10 = Instance.new("UICorner")
-local Frame_3 = Instance.new("Frame")
+local Frame_4 = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
 local accAge_3 = Instance.new("TextLabel")
 local UIGradient_6 = Instance.new("UIGradient")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UICorner_12 = Instance.new("UICorner")
 
 --Properties:
 
@@ -178,40 +182,21 @@ Frame.ZIndex = 2
 
 UICorner_5.Parent = Frame
 
-UIListLayout_2.Parent = Frame
-UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
-UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_2.Padding = UDim.new(0, 8)
-
 Frame_2.Parent = Frame
 Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Frame_2.BorderSizePixel = 0
 Frame_2.Position = UDim2.new(0.345679015, 0, 0, 0)
 Frame_2.Size = UDim2.new(0, 100, 0, 0)
 
-Tele.Name = "Tele"
-Tele.Parent = Frame
-Tele.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
-Tele.Position = UDim2.new(0.264344275, 0, 0.0412371121, 0)
-Tele.Size = UDim2.new(0, 268, 0, 24)
-Tele.ZIndex = 2
-Tele.AutoButtonColor = false
-Tele.Font = Enum.Font.GothamBold
-Tele.Text = "TELEPORT"
-Tele.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tele.TextSize = 14.000
-
-UICorner_6.Parent = Tele
-
 BorderHolder.Name = "BorderHolder"
 BorderHolder.Parent = Frame
 BorderHolder.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
 BorderHolder.BorderSizePixel = 0
-BorderHolder.Position = UDim2.new(0.213114753, 0, 0.206185564, 0)
+BorderHolder.Position = UDim2.new(0.0655737668, 0, 0.226804122, 0)
 BorderHolder.Size = UDim2.new(0, 424, 0, 1)
 BorderHolder.ZIndex = 2
 
-UICorner_7.Parent = BorderHolder
+UICorner_6.Parent = BorderHolder
 
 mainPlrHolder_2.Name = "mainPlrHolder"
 mainPlrHolder_2.Parent = BorderHolder
@@ -226,10 +211,10 @@ mainPlrHolder_2.CanvasSize = UDim2.new(10, 0, 0, 0)
 mainPlrHolder_2.ScrollBarThickness = 0
 mainPlrHolder_2.VerticalScrollBarPosition = Enum.VerticalScrollBarPosition.Left
 
-UIListLayout_3.Parent = mainPlrHolder_2
-UIListLayout_3.FillDirection = Enum.FillDirection.Horizontal
-UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout_3.Padding = UDim.new(0, 10)
+UIListLayout_2.Parent = mainPlrHolder_2
+UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 10)
 
 accAge_2.Name = "accAge"
 accAge_2.Parent = BorderHolder
@@ -246,6 +231,55 @@ accAge_2.TextSize = 14.000
 UIGradient_5.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(173, 173, 173))}
 UIGradient_5.Parent = accAge_2
 
+Frame_3.Parent = Frame
+Frame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.345679015, 0, 0, 0)
+Frame_3.Size = UDim2.new(0, 100, 0, 0)
+
+holderBtn.Name = "holderBtn"
+holderBtn.Parent = infoFrame
+holderBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+holderBtn.BackgroundTransparency = 1.000
+holderBtn.Position = UDim2.new(0.0209297817, 0, 0.453277439, 0)
+holderBtn.Size = UDim2.new(0, 487, 0, 40)
+holderBtn.ZIndex = 3
+
+UIListLayout_3.Parent = holderBtn
+UIListLayout_3.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_3.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_3.Padding = UDim.new(0, 8)
+
+Tele.Name = "Tele"
+Tele.Parent = holderBtn
+Tele.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+Tele.Position = UDim2.new(0.333675563, 0, 0.200000003, 0)
+Tele.Size = UDim2.new(0, 130, 0, 24)
+Tele.ZIndex = 2
+Tele.AutoButtonColor = false
+Tele.Font = Enum.Font.GothamBold
+Tele.Text = "TELEPORT"
+Tele.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tele.TextSize = 14.000
+
+UICorner_7.Parent = Tele
+
+copyLink.Name = "copyLink"
+copyLink.Parent = holderBtn
+copyLink.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+copyLink.Position = UDim2.new(0.333675563, 0, 0.200000003, 0)
+copyLink.Size = UDim2.new(0, 130, 0, 24)
+copyLink.ZIndex = 2
+copyLink.AutoButtonColor = false
+copyLink.Font = Enum.Font.GothamBold
+copyLink.Text = "COPY LINK"
+copyLink.TextColor3 = Color3.fromRGB(255, 255, 255)
+copyLink.TextSize = 14.000
+
+UICorner_8.Parent = copyLink
+
 Handler.Name = "Handler"
 Handler.Parent = mainFrame
 
@@ -259,7 +293,7 @@ TextButton.Font = Enum.Font.GothamBold
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextSize = 14.000
 
-UICorner_8.Parent = TextButton
+UICorner_9.Parent = TextButton
 
 Circle.Name = "Circle"
 Circle.Parent = Handler
@@ -277,29 +311,18 @@ ImageLabel.Visible = false
 ImageLabel.ZIndex = 2
 ImageLabel.Image = "rbxthumb://type=Asset&id=553722174&w=420&h=420"
 
-UICorner_9.Parent = ImageLabel
+UICorner_10.Parent = ImageLabel
 
-BG.Name = "BG"
-BG.Parent = mainFrame
-BG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-BG.BackgroundTransparency = 1.000
-BG.ClipsDescendants = true
-BG.Size = UDim2.new(0, 732, 0, 453)
-BG.Image = "http://www.roblox.com/asset/?id=327558548"
-BG.ImageColor3 = Color3.fromRGB(156, 156, 156)
+Frame_4.Parent = mainFrame
+Frame_4.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+Frame_4.Position = UDim2.new(0.290831268, 0, 0.0237665232, 0)
+Frame_4.Size = UDim2.new(0, 508, 0, 43)
+Frame_4.ZIndex = 2
 
-UICorner_10.Parent = BG
-
-Frame_3.Parent = mainFrame
-Frame_3.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-Frame_3.Position = UDim2.new(0.290831268, 0, 0.0237665232, 0)
-Frame_3.Size = UDim2.new(0, 508, 0, 43)
-Frame_3.ZIndex = 2
-
-UICorner_11.Parent = Frame_3
+UICorner_11.Parent = Frame_4
 
 accAge_3.Name = "accAge"
-accAge_3.Parent = Frame_3
+accAge_3.Parent = Frame_4
 accAge_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 accAge_3.BackgroundTransparency = 1.000
 accAge_3.Position = UDim2.new(0.041379936, 0, 0.20942004, 0)
@@ -313,6 +336,13 @@ accAge_3.TextXAlignment = Enum.TextXAlignment.Left
 
 UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(173, 173, 173))}
 UIGradient_6.Parent = accAge_3
+
+ImageLabel_2.Parent = mainFrame
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.Size = UDim2.new(0, 732, 0, 453)
+ImageLabel_2.Image = "rbxassetid://3899340539"
+
+UICorner_12.Parent = ImageLabel_2
 
 -- Module Scripts:
 
@@ -362,7 +392,7 @@ end
 
 -- Scripts:
 
-local function ESZPX_fake_script() -- Handler.Main 
+local function BXGNAA_fake_script() -- Handler.Main 
 	local script = Instance.new('LocalScript', Handler)
 	local req = require
 	local require = function(obj)
@@ -382,22 +412,26 @@ local function ESZPX_fake_script() -- Handler.Main
 	clone1.Parent = script.Parent.Parent
 	clone1.Thickness = 2
 	clone1.ApplyStrokeMode = 'Border'
-	clone1.Color = Color3.fromRGB(0, 255, 157)
+	clone1.Color = Color3.fromRGB(255, 162, 0)
 	clone1.Enabled = true
 	--------------------------------------------------- plrButtons
 	local clone2 = script.Parent:WaitForChild('UIStroke'):Clone()
 	clone2.Thickness = 2
 	clone2.ApplyStrokeMode = 'Border'
-	clone2.Color = Color3.fromRGB(0, 255, 157)
+	clone2.Color = Color3.fromRGB(255, 162, 0)
 	clone2.Enabled = true
 	clone2.Parent = script.Parent.TextButton
 	--------------------------------------------------- Button
-	local clone3 = script.Parent:WaitForChild('UIStroke'):Clone()
-	clone3.Thickness = 1
-	clone3.ApplyStrokeMode = 'Border'
-	clone3.Color = Color3.fromRGB(0, 255, 157)
-	clone3.Enabled = true
-	clone3.Parent = script.Parent.Parent.infoFrame.Frame.Tele
+	for i,q in pairs(script.Parent.Parent.infoFrame.holderBtn:GetChildren()) do
+		if q:IsA('TextButton') then
+			local clone3 = script.Parent:WaitForChild('UIStroke'):Clone()
+			clone3.Thickness = 1
+			clone3.ApplyStrokeMode = 'Border'
+			clone3.Color = Color3.fromRGB(255, 162, 0)
+			clone3.Enabled = true
+			clone3.Parent = q
+		end
+	end
 	--------------------------------------------------- Image
 	local clone4 = script.Parent:WaitForChild('UIStroke'):Clone()
 	clone4.Thickness = 2
@@ -431,7 +465,7 @@ local function ESZPX_fake_script() -- Handler.Main
 	
 	local womp = Instance.new('StringValue')
 	womp.Name = 'plr'
-	womp.Parent = script.Parent.Parent.infoFrame.Frame.Tele
+	womp.Parent = script.Parent.Parent.infoFrame.holderBtn.Tele
 	-----------------------------------------------------------------------------------------------------------[ END ]
 	
 	---------------------------------------------------------------------------------------------------[ Button Clone ]
@@ -477,7 +511,7 @@ local function ESZPX_fake_script() -- Handler.Main
 				script.Parent.Parent.infoFrame.userName.Text = ("Name: "..z.Name)
 				script.Parent.Parent.infoFrame.userId.Text = ("ID: ")..game.Players:FindFirstChild(z.Name).UserId
 				script.Parent.Parent.infoFrame.displayName.Text = ("Display: @")..game.Players:FindFirstChild(z.Name).DisplayName
-				script.Parent.Parent.infoFrame.Frame.Tele.plr.Value = z.Name
+				script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value = z.Name
 				local Player = game.Players:FindFirstChild(z.Name)
 	
 				local joinTime = os.time() - (Player.AccountAge*86400)
@@ -575,24 +609,34 @@ local function ESZPX_fake_script() -- Handler.Main
 	--------------------------------------------------------------------------------------------------------------[ END ]
 	
 	-------------------------------------------------------------------------------------------------------------[ Button Functions ]
-	script.Parent.Parent.infoFrame.Frame.Tele.MouseButton1Click:Connect(function()
-		local find = game.Workspace:FindFirstChild(script.Parent.Parent.infoFrame.Frame.Tele.plr.Value):WaitForChild('HumanoidRootPart')
+	script.Parent.Parent.infoFrame.holderBtn.Tele.MouseButton1Click:Connect(function()
+		local find = game.Workspace:FindFirstChild(script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value):WaitForChild('HumanoidRootPart')
 		
 		if find then
 			
 			local Mouse = game.Players.LocalPlayer:GetMouse()
 			local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
 			
-			CircleClick(script.Parent.Parent.infoFrame.Frame.Tele, Mouse.X, Mouse.Y) 
+			CircleClick(script.Parent.Parent.infoFrame.holderBtn.Tele, Mouse.X, Mouse.Y) 
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = find.CFrame
 			
 			game.StarterGui:SetCore("SendNotification", {
 				Title = "Player Viewer";
-				Text = "Teleported To Player: "..script.Parent.Parent.infoFrame.Frame.Tele.plr.Value;
+				Text = "Teleported To Player: "..script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value;
 				Icon = "http://www.roblox.com/asset/?id=9830915901";
 				Duration = 5;
 			})
 		end
+	end)
+	
+	script.Parent.Parent.infoFrame.holderBtn.copyLink.MouseButton1Click:Connect(function()
+		setclipboard("https://www.roblox.com/users/"..game.Players:FindFirstChild(script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value).UserId.."/profile")
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "Player Viewer";
+			Text = "Copied Link To: "..script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value;
+			Icon = "http://www.roblox.com/asset/?id=9830915901";
+			Duration = 5;
+		})
 	end)
 	---------------------------------------------------------------------------------------------------------------[ END ]
 	
@@ -608,4 +652,4 @@ local function ESZPX_fake_script() -- Handler.Main
 		end
 	end
 end
-coroutine.wrap(ESZPX_fake_script)()
+coroutine.wrap(BXGNAA_fake_script)()
