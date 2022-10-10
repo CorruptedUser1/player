@@ -47,8 +47,6 @@ local UIGradient_6 = Instance.new("UIGradient")
 local ImageLabel_2 = Instance.new("ImageLabel")
 local UICorner_12 = Instance.new("UICorner")
 
---Properties:
-
 playerViewer.Name = "playerViewer"
 playerViewer.Parent = game.CoreGui
 playerViewer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -392,7 +390,7 @@ end
 
 -- Scripts:
 
-local function BXGNAA_fake_script() -- Handler.Main 
+local function EJVCAEV_fake_script() -- Handler.Main 
 	local script = Instance.new('LocalScript', Handler)
 	local req = require
 	local require = function(obj)
@@ -632,7 +630,7 @@ local function BXGNAA_fake_script() -- Handler.Main
 	script.Parent.Parent.infoFrame.holderBtn.copyLink.MouseButton1Click:Connect(function()
 		local Mouse = game.Players.LocalPlayer:GetMouse()
 		local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
-			
+	
 		CircleClick(script.Parent.Parent.infoFrame.holderBtn.copyLink, Mouse.X, Mouse.Y) 
 		setclipboard("https://www.roblox.com/users/"..game.Players:FindFirstChild(script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value).UserId.."/profile")
 		game.StarterGui:SetCore("SendNotification", {
@@ -656,4 +654,4 @@ local function BXGNAA_fake_script() -- Handler.Main
 		end
 	end
 end
-coroutine.wrap(BXGNAA_fake_script)()
+coroutine.wrap(EJVCAEV_fake_script)()
