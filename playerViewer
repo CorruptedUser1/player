@@ -630,6 +630,10 @@ local function BXGNAA_fake_script() -- Handler.Main
 	end)
 	
 	script.Parent.Parent.infoFrame.holderBtn.copyLink.MouseButton1Click:Connect(function()
+		local Mouse = game.Players.LocalPlayer:GetMouse()
+		local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
+			
+		CircleClick(script.Parent.Parent.infoFrame.holderBtn.copyLink, Mouse.X, Mouse.Y) 
 		setclipboard("https://www.roblox.com/users/"..game.Players:FindFirstChild(script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value).UserId.."/profile")
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "Player Viewer";
