@@ -34,18 +34,30 @@ local Tele = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
 local copyLink = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
+local espBtn = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
 local Handler = Instance.new("Folder")
 local TextButton = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local Circle = Instance.new("ImageLabel")
 local ImageLabel = Instance.new("ImageLabel")
-local UICorner_10 = Instance.new("UICorner")
-local Frame_4 = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
+local Frame_4 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
 local accAge_3 = Instance.new("TextLabel")
 local UIGradient_6 = Instance.new("UIGradient")
+local accAge_4 = Instance.new("TextLabel")
+local UIGradient_7 = Instance.new("UIGradient")
 local ImageLabel_2 = Instance.new("ImageLabel")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
+local BG = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local loaderFrame = Instance.new("Frame")
+local handlerIntro = Instance.new("Folder")
+local UICorner_15 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
+local UICorner_16 = Instance.new("UICorner")
 
 playerViewer.Name = "playerViewer"
 playerViewer.Parent = game.CoreGui
@@ -53,9 +65,11 @@ playerViewer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 mainFrame.Name = "mainFrame"
 mainFrame.Parent = playerViewer
+mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 mainFrame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
-mainFrame.Position = UDim2.new(0.276283622, 0, 0.216957599, 0)
-mainFrame.Size = UDim2.new(0, 732, 0, 453)
+mainFrame.ClipsDescendants = true
+mainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+mainFrame.Visible = false
 
 UICorner.Parent = mainFrame
 
@@ -272,11 +286,25 @@ copyLink.Size = UDim2.new(0, 130, 0, 24)
 copyLink.ZIndex = 2
 copyLink.AutoButtonColor = false
 copyLink.Font = Enum.Font.GothamBold
-copyLink.Text = "COPY LINK"
+copyLink.Text = "COPY USER LINK"
 copyLink.TextColor3 = Color3.fromRGB(255, 255, 255)
 copyLink.TextSize = 14.000
 
 UICorner_8.Parent = copyLink
+
+espBtn.Name = "espBtn"
+espBtn.Parent = holderBtn
+espBtn.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
+espBtn.Position = UDim2.new(0.333675563, 0, 0.200000003, 0)
+espBtn.Size = UDim2.new(0, 130, 0, 24)
+espBtn.ZIndex = 2
+espBtn.AutoButtonColor = false
+espBtn.Font = Enum.Font.GothamBold
+espBtn.Text = "ESP"
+espBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+espBtn.TextSize = 14.000
+
+UICorner_9.Parent = espBtn
 
 Handler.Name = "Handler"
 Handler.Parent = mainFrame
@@ -291,7 +319,7 @@ TextButton.Font = Enum.Font.GothamBold
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextSize = 14.000
 
-UICorner_9.Parent = TextButton
+UICorner_10.Parent = TextButton
 
 Circle.Name = "Circle"
 Circle.Parent = Handler
@@ -309,7 +337,7 @@ ImageLabel.Visible = false
 ImageLabel.ZIndex = 2
 ImageLabel.Image = "rbxthumb://type=Asset&id=553722174&w=420&h=420"
 
-UICorner_10.Parent = ImageLabel
+UICorner_11.Parent = ImageLabel
 
 Frame_4.Parent = mainFrame
 Frame_4.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
@@ -317,7 +345,7 @@ Frame_4.Position = UDim2.new(0.290831268, 0, 0.0237665232, 0)
 Frame_4.Size = UDim2.new(0, 508, 0, 43)
 Frame_4.ZIndex = 2
 
-UICorner_11.Parent = Frame_4
+UICorner_12.Parent = Frame_4
 
 accAge_3.Name = "accAge"
 accAge_3.Parent = Frame_4
@@ -327,7 +355,7 @@ accAge_3.Position = UDim2.new(0.041379936, 0, 0.20942004, 0)
 accAge_3.Size = UDim2.new(0, 112, 0, 24)
 accAge_3.ZIndex = 2
 accAge_3.Font = Enum.Font.GothamBold
-accAge_3.Text = "Player Viewer"
+accAge_3.Text = "Spooky Viewer"
 accAge_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 accAge_3.TextSize = 16.000
 accAge_3.TextXAlignment = Enum.TextXAlignment.Left
@@ -335,12 +363,73 @@ accAge_3.TextXAlignment = Enum.TextXAlignment.Left
 UIGradient_6.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(173, 173, 173))}
 UIGradient_6.Parent = accAge_3
 
+accAge_4.Name = "accAge"
+accAge_4.Parent = Frame_4
+accAge_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+accAge_4.BackgroundTransparency = 1.000
+accAge_4.Position = UDim2.new(0.763820708, 0, 0.209420145, 0)
+accAge_4.Size = UDim2.new(0, 106, 0, 24)
+accAge_4.ZIndex = 2
+accAge_4.Font = Enum.Font.GothamBold
+accAge_4.Text = "1.0.2"
+accAge_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+accAge_4.TextSize = 16.000
+accAge_4.TextXAlignment = Enum.TextXAlignment.Right
+
+UIGradient_7.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(255, 255, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(173, 173, 173))}
+UIGradient_7.Parent = accAge_4
+
 ImageLabel_2.Parent = mainFrame
 ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel_2.Size = UDim2.new(0, 732, 0, 453)
 ImageLabel_2.Image = "rbxassetid://3899340539"
 
-UICorner_12.Parent = ImageLabel_2
+UICorner_13.Parent = ImageLabel_2
+
+BG.Name = "BG"
+BG.Parent = playerViewer
+BG.AnchorPoint = Vector2.new(0.5, 0.5)
+BG.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
+BG.Position = UDim2.new(0.542787313, -70, 0.587281823, -70)
+
+UICorner_14.Parent = BG
+
+loaderFrame.Name = "loaderFrame"
+loaderFrame.Parent = playerViewer
+loaderFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+loaderFrame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
+loaderFrame.ClipsDescendants = true
+loaderFrame.Position = UDim2.new(0.536674857, -60, 0.574813008, -60)
+loaderFrame.ZIndex = 2
+
+handlerIntro.Name = "handlerIntro"
+handlerIntro.Parent = loaderFrame
+
+UICorner_15.Parent = loaderFrame
+
+TextLabel.Parent = loaderFrame
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.5, 0, 0.107692309, 0)
+TextLabel.Size = UDim2.new(0, 130, 0, 29)
+TextLabel.ZIndex = 2
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "Welcome Anvtrx"
+TextLabel.TextColor3 = Color3.fromRGB(140, 140, 140)
+TextLabel.TextSize = 15.000
+TextLabel.TextTransparency = 1.000
+
+ImageLabel_3.Parent = loaderFrame
+ImageLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+ImageLabel_3.BackgroundTransparency = 1.000
+ImageLabel_3.Position = UDim2.new(0.807692289, -40, 0.907692313, -40)
+ImageLabel_3.Size = UDim2.new(0, 80, 0, 80)
+ImageLabel_3.ZIndex = 2
+ImageLabel_3.ImageTransparency = 1.000
+
+UICorner_16.Parent = ImageLabel_3
 
 -- Module Scripts:
 
@@ -390,7 +479,7 @@ end
 
 -- Scripts:
 
-local function RFGYHM_fake_script() -- Handler.Main 
+local function RRPLRR_fake_script() -- Handler.Main 
 	local script = Instance.new('LocalScript', Handler)
 	local req = require
 	local require = function(obj)
@@ -657,4 +746,126 @@ local function RFGYHM_fake_script() -- Handler.Main
 	until nil
 	------------------------------------------------------------------------------------------------------[ END ]
 end
-coroutine.wrap(RFGYHM_fake_script)()
+coroutine.wrap(RRPLRR_fake_script)()
+local function TDSULKC_fake_script() -- handlerIntro.Main 
+	local script = Instance.new('LocalScript', handlerIntro)
+	local req = require
+	local require = function(obj)
+		local fake = fake_module_scripts[obj]
+		if fake then
+			return fake()
+		end
+		return req(obj)
+	end
+
+	wait(game:IsLoaded())
+	---------------------------------------------------------------------------------------------------------------[ Stroke Giver ]
+	--------------------------------------------------- mainFrame
+	
+	local sound = Instance.new('Sound')
+	sound.Parent = script.Parent
+	sound.Name = 'loaded'
+	sound.SoundId = 'rbxassetid://6647898215'
+	sound.PlaybackSpeed = 2
+	
+	local strokeNew = Instance.new('UIStroke')
+	strokeNew.Parent = script.Parent
+	local clone2 = script.Parent:WaitForChild('UIStroke'):Clone()
+	clone2.Parent = script.Parent.Parent.Parent.BG
+	clone2.Thickness = 2
+	clone2.ApplyStrokeMode = 'Border'
+	clone2.Color = Color3.fromRGB(255, 162, 0)
+	clone2.Enabled = true
+	
+	wait(1)
+	
+	sound:Play()
+	
+	local Info = TweenInfo.new(0.3)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.Parent:FindFirstChild('BG'), Info, {Size = UDim2.new(0, 150,0, 150)})
+	Tween:Play()
+	
+	wait(0.3)
+	
+	local Info = TweenInfo.new(0.3)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.Parent:FindFirstChild('loaderFrame'), Info, {Size = UDim2.new(0, 130,0, 130)})
+	Tween:Play()
+	
+	script.Parent.Parent.TextLabel.Text = 'Welcome '..game.Players.LocalPlayer.Name
+	
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	local imageLabel = script.Parent.Parent.ImageLabel
+	imageLabel.Image = content
+	
+	wait(1)
+	
+	local Info = TweenInfo.new(0.5)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.ImageLabel, Info, {BackgroundTransparency = 0})
+	Tween:Play()
+	local Info = TweenInfo.new(0.5)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.ImageLabel, Info, {ImageTransparency = 0})
+	Tween:Play()
+	local Info = TweenInfo.new(0.5)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.TextLabel, Info, {TextTransparency = 0})
+	Tween:Play()
+	
+	wait(3)
+	
+	local Info = TweenInfo.new(0.5)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.ImageLabel, Info, {BackgroundTransparency = 1})
+	Tween:Play()
+	local Info = TweenInfo.new(0.5)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.ImageLabel, Info, {ImageTransparency = 1})
+	Tween:Play()
+	local Info = TweenInfo.new(0.5)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.TextLabel, Info, {TextTransparency = 1})
+	Tween:Play()
+	
+	wait(1)
+	
+	local Info = TweenInfo.new(0.3)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.Parent:FindFirstChild('loaderFrame'), Info, {Size = UDim2.new(0, 0,0, 0)})
+	Tween:Play()
+	
+	wait(0.3)
+	
+	local Info = TweenInfo.new(0.3)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.Parent:FindFirstChild('BG'), Info, {Size = UDim2.new(0, 0,0, 0)})
+	Tween:Play()
+	
+	wait(1)
+	
+	script.Parent.Parent.Parent:FindFirstChild('loaderFrame').Visible = false
+	
+	script.Parent.Parent.Parent:FindFirstChild('BG').Visible = false
+	
+	script.Parent.Parent.Parent.mainFrame:WaitForChild('UIStroke').Transparency = 1
+	
+	script.Parent.Parent.Parent.mainFrame.Visible = true
+	
+	wait(0.5)
+	
+	local Info = TweenInfo.new(0.3)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.Parent.mainFrame, Info, {Size = UDim2.new(0, 732,0, 453)})
+	Tween:Play()
+	
+	wait(1)
+	
+	local Info = TweenInfo.new(0.2)
+	local Tween = game:GetService('TweenService'):Create(script.Parent.Parent.Parent.mainFrame:WaitForChild('UIStroke'), Info, {Transparency = 0})
+	Tween:Play()
+	
+	wait(1)
+	
+	script.Parent.Parent.Parent.BG:Destroy()
+	script.Parent.Parent.Parent.loaderFrame:Destroy()
+end
+coroutine.wrap(TDSULKC_fake_script)()
