@@ -39,7 +39,6 @@ local UICorner_9 = Instance.new("UICorner")
 local Handler = Instance.new("Folder")
 local TextButton = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
-local Circle = Instance.new("ImageLabel")
 local ImageLabel = Instance.new("ImageLabel")
 local UICorner_11 = Instance.new("UICorner")
 local Frame_4 = Instance.new("Frame")
@@ -68,8 +67,7 @@ mainFrame.Parent = playerViewer
 mainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 mainFrame.BackgroundColor3 = Color3.fromRGB(49, 49, 49)
 mainFrame.ClipsDescendants = true
-mainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-mainFrame.Visible = false
+mainFrame.Position = UDim2.new(0.49988848, 0, 0.498984605, 0)
 
 UICorner.Parent = mainFrame
 
@@ -270,7 +268,6 @@ Tele.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 Tele.Position = UDim2.new(0.333675563, 0, 0.200000003, 0)
 Tele.Size = UDim2.new(0, 130, 0, 24)
 Tele.ZIndex = 2
-Tele.AutoButtonColor = false
 Tele.Font = Enum.Font.GothamBold
 Tele.Text = "TELEPORT"
 Tele.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -284,7 +281,6 @@ copyLink.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 copyLink.Position = UDim2.new(0.333675563, 0, 0.200000003, 0)
 copyLink.Size = UDim2.new(0, 130, 0, 24)
 copyLink.ZIndex = 2
-copyLink.AutoButtonColor = false
 copyLink.Font = Enum.Font.GothamBold
 copyLink.Text = "COPY USER LINK"
 copyLink.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -298,7 +294,6 @@ espBtn.BackgroundColor3 = Color3.fromRGB(79, 79, 79)
 espBtn.Position = UDim2.new(0.333675563, 0, 0.200000003, 0)
 espBtn.Size = UDim2.new(0, 130, 0, 24)
 espBtn.ZIndex = 2
-espBtn.AutoButtonColor = false
 espBtn.Font = Enum.Font.GothamBold
 espBtn.Text = "ESP"
 espBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -314,20 +309,11 @@ TextButton.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
 TextButton.Position = UDim2.new(0.0408800431, 0, 0.0469412357, 0)
 TextButton.Size = UDim2.new(0, 157, 0, 24)
 TextButton.Visible = false
-TextButton.AutoButtonColor = false
 TextButton.Font = Enum.Font.GothamBold
 TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextSize = 14.000
 
 UICorner_10.Parent = TextButton
-
-Circle.Name = "Circle"
-Circle.Parent = Handler
-Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Circle.BackgroundTransparency = 1.000
-Circle.ZIndex = 10
-Circle.Image = "rbxassetid://266543268"
-Circle.ImageTransparency = 0.900
 
 ImageLabel.Parent = Handler
 ImageLabel.BackgroundColor3 = Color3.fromRGB(65, 65, 65)
@@ -390,7 +376,7 @@ BG.Name = "BG"
 BG.Parent = playerViewer
 BG.AnchorPoint = Vector2.new(0.5, 0.5)
 BG.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
-BG.Position = UDim2.new(0.542787313, -70, 0.587281823, -70)
+BG.Position = UDim2.new(0.536637902, -70, 0.586034954, -70)
 
 UICorner_14.Parent = BG
 
@@ -399,7 +385,7 @@ loaderFrame.Parent = playerViewer
 loaderFrame.AnchorPoint = Vector2.new(0.5, 0.5)
 loaderFrame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
 loaderFrame.ClipsDescendants = true
-loaderFrame.Position = UDim2.new(0.536674857, -60, 0.574813008, -60)
+loaderFrame.Position = UDim2.new(0.533889472, -65, 0.578883469, -65)
 loaderFrame.ZIndex = 2
 
 handlerIntro.Name = "handlerIntro"
@@ -431,64 +417,10 @@ ImageLabel_3.ImageTransparency = 1.000
 
 UICorner_16.Parent = ImageLabel_3
 
--- Module Scripts:
-
-local fake_module_scripts = {}
-
-do -- Handler.CircleClick
-	local script = Instance.new('ModuleScript', Handler)
-	script.Name = "CircleClick"
-	local function module_script()
-		-- ReplicatedStorage --
-		function CircleClick(Button, X, Y)
-			coroutine.resume(coroutine.create(function()
-				
-				Button.ClipsDescendants = true
-				
-				local Circle = script.Parent:WaitForChild("Circle"):Clone()
-					Circle.Parent = Button
-					local NewX = X - Circle.AbsolutePosition.X
-					local NewY = Y - Circle.AbsolutePosition.Y
-					Circle.Position = UDim2.new(0, NewX, 0, NewY)
-				
-				local Size = 0
-					if Button.AbsoluteSize.X > Button.AbsoluteSize.Y then
-						 Size = Button.AbsoluteSize.X*1.5
-					elseif Button.AbsoluteSize.X < Button.AbsoluteSize.Y then
-						 Size = Button.AbsoluteSize.Y*1.5
-				elseif Button.AbsoluteSize.X == Button.AbsoluteSize.Y then																										
-					Size = Button.AbsoluteSize.X*1.5
-					end
-				
-				local Time = 0.5
-					Circle:TweenSizeAndPosition(UDim2.new(0, Size, 0, Size), UDim2.new(0.5, -Size/2, 0.5, -Size/2), "Out", "Quad", Time, false, nil)
-					for i=1,10 do
-						Circle.ImageTransparency = Circle.ImageTransparency + 0.01
-						wait(Time/10)
-					end
-					Circle:Destroy()
-					
-			end))
-		end
-		
-		return CircleClick
-	end
-	fake_module_scripts[script] = module_script
-end
-
-
 -- Scripts:
 
-local function ZLBVL_fake_script() -- Handler.Main 
+local function MISKEV_fake_script() -- Handler.Main 
 	local script = Instance.new('LocalScript', Handler)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	wait(game:IsLoaded())
 	---------------------------------------------------------------------------------------------------------------[ Stroke Giver ]
@@ -653,14 +585,10 @@ local function ZLBVL_fake_script() -- Handler.Main
 		
 		if find then
 			
-			local Mouse = game.Players.LocalPlayer:GetMouse()
-			local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
-			
-			CircleClick(script.Parent.Parent.infoFrame.holderBtn.Tele, Mouse.X, Mouse.Y) 
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = find.CFrame
 			
 			game.StarterGui:SetCore("SendNotification", {
-				Title = "Player Viewer";
+				Title = script.Parent.Parent.Frame.name.Text;
 				Text = "Teleported To Player: "..script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value;
 				Icon = "http://www.roblox.com/asset/?id=9830915901";
 				Duration = 5;
@@ -669,13 +597,9 @@ local function ZLBVL_fake_script() -- Handler.Main
 	end)
 	
 	script.Parent.Parent.infoFrame.holderBtn.copyLink.MouseButton1Click:Connect(function()
-		local Mouse = game.Players.LocalPlayer:GetMouse()
-		local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
-	
-		CircleClick(script.Parent.Parent.infoFrame.holderBtn.copyLink, Mouse.X, Mouse.Y) 
 		setclipboard("https://www.roblox.com/users/"..game.Players:FindFirstChild(script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value).UserId.."/profile")
 		game.StarterGui:SetCore("SendNotification", {
-			Title = "Player Viewer";
+			Title = script.Parent.Parent.Frame.name.Text;
 			Text = "Copied Link To: "..script.Parent.Parent.infoFrame.holderBtn.Tele.plr.Value;
 			Icon = "http://www.roblox.com/asset/?id=9830915901";
 			Duration = 5;
@@ -683,10 +607,6 @@ local function ZLBVL_fake_script() -- Handler.Main
 	end)
 	
 	script.Parent.Parent.infoFrame.holderBtn.espBtn.MouseButton1Click:Connect(function()
-		local Mouse = game.Players.LocalPlayer:GetMouse()
-		local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
-	
-		CircleClick(script.Parent.Parent.infoFrame.holderBtn.espBtn, Mouse.X, Mouse.Y)
 		
 		pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))() end)
 		
@@ -700,16 +620,17 @@ local function ZLBVL_fake_script() -- Handler.Main
 	---------------------------------------------------------------------------------------------------------------[ END ]
 	
 	----------------------------------------------------------------------------------------------------------------[ Affect Giver]
-	for i,a in pairs(script.Parent.Parent.plrHolder.mainPlrHolder:GetChildren()) do
-		if a:IsA('TextButton') then
-			a.MouseButton1Click:Connect(function()
-				local Mouse = game.Players.LocalPlayer:GetMouse()
-				local CircleClick = require(script.Parent:WaitForChild("CircleClick")) 
+	local Players = game:GetService('Players')
 	
-				CircleClick(a, Mouse.X, Mouse.Y) 
-			end)
-		end
-	end
+	-- Fetch the thumbnail
+	local userId = 1
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	-- Set the ImageLabel's content to the user thumbnail
+	local imageLabel = script.Parent.Parent.infoFrame.plrImage
+	imageLabel.Image = content
 	--------------------------------------------------------------------------------------------------------------[ END ]
 	
 	----------------------------------------------------------------------------------------------------[ Circle Click & Info ]
@@ -762,17 +683,9 @@ local function ZLBVL_fake_script() -- Handler.Main
 	until nil
 	------------------------------------------------------------------------------------------------------[ END ]
 end
-coroutine.wrap(ZLBVL_fake_script)()
-local function WQMJQM_fake_script() -- handlerIntro.Main 
+coroutine.wrap(MISKEV_fake_script)()
+local function ISLXQE_fake_script() -- handlerIntro.Main 
 	local script = Instance.new('LocalScript', handlerIntro)
-	local req = require
-	local require = function(obj)
-		local fake = fake_module_scripts[obj]
-		if fake then
-			return fake()
-		end
-		return req(obj)
-	end
 
 	wait(game:IsLoaded())
 	---------------------------------------------------------------------------------------------------------------[ Stroke Giver ]
@@ -881,7 +794,14 @@ local function WQMJQM_fake_script() -- handlerIntro.Main
 	
 	wait(1)
 	
+	game.StarterGui:SetCore("SendNotification", {
+		Title = script.Parent.Parent.Parent.mainFrame.Frame.name.Text;
+		Text = script.Parent.Parent.Parent.mainFrame.Frame.name.Text.." Has LOADED";
+		Icon = "http://www.roblox.com/asset/?id=9830915901";
+		Duration = 5;
+	})
+	
 	script.Parent.Parent.Parent.BG:Destroy()
 	script.Parent.Parent.Parent.loaderFrame:Destroy()
 end
-coroutine.wrap(WQMJQM_fake_script)()
+coroutine.wrap(ISLXQE_fake_script)()
